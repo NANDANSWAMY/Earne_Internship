@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getProfiles } from '../actions/record'
 import { NavLink } from "react-router-dom";
+import Moment from 'react-moment';
 
 const Records = ({ getProfiles, allProfiles: { profiles, loading } }) => {
     useEffect(() => {
@@ -20,29 +21,29 @@ const Records = ({ getProfiles, allProfiles: { profiles, loading } }) => {
                     <td>{email}</td>
                     <td>{investmentType}</td>
                     <td>{phone}</td>
-                    <td>{dateOfBirth}</td>
+                    <td><Moment format='YYYY/MM/DD'>{dateOfBirth}</Moment></td>
                 </tr>
             )
         })
     }
     return (
         <div>
-            <h1>Nothing at the moment</h1>
-            <table>
+            <h1 className="title">List of All Registered Users</h1>
+            <table className="records">
 
                 <tbody>
                     <tr>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Email </td>
-                        <td> Investment Type</td>
-                        <td>Phone </td>
-                        <td>Date of Birth</td>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email </th>
+                        <th> Investment Type</th>
+                        <th>Phone </th>
+                        <th>Date of Birth</th>
                     </tr>
                     {renderTable()}
                 </tbody>
             </table>
-            <NavLink to="/" activeClassName="active">
+            <NavLink to="/" className='btn btn-primary'>
                 Go Back
       </NavLink>
 

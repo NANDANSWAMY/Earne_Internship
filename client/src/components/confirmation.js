@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import Moment from 'react-moment';
 
 const confirmPage = formData => {
     console.log(formData)
@@ -7,24 +8,34 @@ const confirmPage = formData => {
         (formData.location && formData.location.formData) || {};
     return (
         <div>
-            <NavLink to="/register" activeClassName="active">
+            <NavLink to="/register" className='btn btn-primary'>
                 Add Another Record
       </NavLink>
-            <NavLink to="/" activeClassName="active">
+            <NavLink to="/" className='btn btn-primary'>
                 Go Back to Main Page
 </NavLink>
             <div className="form-details">
                 <div>
-                    <strong>Username:</strong> {firstName}
+                    <strong>First Name:</strong> {firstName}
+                </div>
+                <div>
+                    <strong>Last Name:</strong> {lastName}
                 </div>
                 <div>
                     <strong>Email:</strong> {email}
                 </div>
-                <div>
-                    <strong>City:</strong> {lastName}
-                </div>
+
                 <div>
                     <strong>Phone:</strong> {phone}
+                </div>
+                <div>
+                    <strong>Investment Type:</strong> {investmentType}
+                </div>
+                <div>
+                    <strong>Amount:</strong> {amount}
+                </div>
+                <div>
+                    <strong>Date of Birth:</strong> <Moment format='YYYY/MM/DD'>{dateOfBirth}</Moment>
                 </div>
             </div>
         </div>
