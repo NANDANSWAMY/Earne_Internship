@@ -10,9 +10,9 @@ const confirmPage = formData => {
         <div>
 
             <div className="form-details">
-                <h2>Thank you for submitting your request
-            <h3>You will be contacted soon. Check your email for confirmation </h3>
-                </h2>
+                <h2>Thank you for submitting your request</h2>
+                <h3>You will be contacted soon. Check your email for confirmation </h3>
+                <h3>Below are your submitted details</h3>
                 <div>
                     <strong>First Name:</strong> {firstName}
                 </div>
@@ -30,7 +30,7 @@ const confirmPage = formData => {
                     <strong>Investment Type:</strong> {investmentType}
                 </div>
                 <div>
-                    <strong>Amount:</strong> {amount}
+                    <strong>Amount $: </strong> {amount}
                 </div>
                 <div>
                     <strong>Date of Birth:</strong> <Moment format='YYYY/MM/DD'>{dateOfBirth}</Moment>

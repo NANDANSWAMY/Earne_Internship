@@ -159,7 +159,7 @@ const CreateRecord = ({ addRecord, history }) => {
                 <div>
                     <input
                         type="number"
-                        placeholder="Amount"
+                        placeholder="Amount $"
                         name="amount"
                         value={amount}
                         min={minVal(investmentType)}
