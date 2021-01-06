@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://bad123:bad123@moviereview.prqlp.mongodb.net/earn?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+}
