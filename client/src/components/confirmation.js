@@ -8,13 +8,11 @@ const confirmPage = formData => {
         (formData.location && formData.location.formData) || {};
     return (
         <div>
-            <NavLink to="/register" className='btn btn-primary'>
-                Add Another Record
-      </NavLink>
-            <NavLink to="/" className='btn btn-primary'>
-                Go Back to Main Page
-</NavLink>
+
             <div className="form-details">
+                <h2>Thank you for submitting your request
+            <h3>You will be contacted soon. Check your email for confirmation </h3>
+                </h2>
                 <div>
                     <strong>First Name:</strong> {firstName}
                 </div>
@@ -38,6 +36,12 @@ const confirmPage = formData => {
                     <strong>Date of Birth:</strong> <Moment format='YYYY/MM/DD'>{dateOfBirth}</Moment>
                 </div>
             </div>
+            <NavLink to="/register" className='btn btn-primary'>
+                Add Another Record
+  </NavLink>
+            <NavLink to="/" className='btn btn-primary'>
+                Go Back to Main Page
+</NavLink>
         </div>
     );
 
