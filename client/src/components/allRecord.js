@@ -21,6 +21,7 @@ const Records = ({ getProfiles, allProfiles: { profiles, loading } }) => {
                     <td>{email}</td>
                     <td>{investmentType}</td>
                     <td>{phone}</td>
+                    <td>{amount}</td>
                     <td><Moment format='YYYY/MM/DD'>{dateOfBirth}</Moment></td>
                 </tr>
             )
@@ -36,9 +37,11 @@ const Records = ({ getProfiles, allProfiles: { profiles, loading } }) => {
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email </th>
-                        <th> Investment Type</th>
+                        <th>Investment Type</th>
                         <th>Phone </th>
+                        <th>Amount ($)</th>
                         <th>Date of Birth</th>
+
                     </tr>
                     {renderTable()}
                 </tbody>
